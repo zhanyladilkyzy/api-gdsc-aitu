@@ -7,11 +7,11 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class Event {
+public class Post {
 
     private String title;
 
-    private String imageUrl;
-
     private String description;
+
+    private String link;
 }

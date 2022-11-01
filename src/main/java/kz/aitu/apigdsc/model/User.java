@@ -13,7 +13,9 @@ public class User {
     private String name;
 
     private String surname;
-    @NotNull
+
+    private String bio;
+
     private Long barcode;
     @NotNull
     private Long telegramId;
@@ -25,4 +27,9 @@ public class User {
     private String password;
 
     private Boolean confirmed;
+
+    private UserRole role;
+
+    private String imageUrl;
+
 }
