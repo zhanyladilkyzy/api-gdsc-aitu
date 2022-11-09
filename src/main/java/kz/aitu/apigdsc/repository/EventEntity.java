@@ -14,7 +14,7 @@ import javax.persistence.*;
 public class EventEntity {
     @Id
     @GeneratedValue
-    private Integer id;
+    private Long id;
     @Column(nullable = false)
     private String title;
     @Column(name = "image_url")

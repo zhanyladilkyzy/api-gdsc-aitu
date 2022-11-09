@@ -1,5 +1,6 @@
 package kz.aitu.apigdsc.model;
 
+
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -7,7 +8,9 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class Event {
+public class EventRequest {
+
+    private Long eventId;
 
     private String title;
 
