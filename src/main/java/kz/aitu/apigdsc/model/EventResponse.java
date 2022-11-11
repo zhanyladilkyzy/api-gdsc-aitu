@@ -8,7 +8,7 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 public class EventResponse {
-    private Long eventId;
+    private String eventId;
 
     private String title;
 

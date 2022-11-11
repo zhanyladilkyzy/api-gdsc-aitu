@@ -10,7 +10,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class EventRequest {
 
-    private Long eventId;
+    private String eventId;
 
     private String title;
 

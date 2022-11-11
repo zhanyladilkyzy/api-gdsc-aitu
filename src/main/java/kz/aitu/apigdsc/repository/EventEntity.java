@@ -15,6 +15,8 @@ public class EventEntity {
     @Id
     @GeneratedValue
     private Long id;
+    @Column(unique = true)
+    private String eventId;
     @Column(nullable = false)
     private String title;
     @Column(name = "image_url")
