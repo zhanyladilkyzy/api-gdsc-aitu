@@ -30,10 +30,10 @@ public class EventServiceImpl implements EventService {
     @Override
     public EventResponse createEvent(EventRequest eventRequest) {
         eventRequest.setEventId(UUID.randomUUID().toString());
-        EventEntity employeeEntity = modelMapper.map(eventRequest, EventEntity.class);
-        eventRepository.save(employeeEntity);
+        EventEntity eventEntity = modelMapper.map(eventRequest, EventEntity.class);
+        eventRepository.save(eventEntity);
 
-        return modelMapper.map(employeeEntity, EventResponse.class);
+        return modelMapper.map(eventEntity, EventResponse.class);
     }
 
     @Override
