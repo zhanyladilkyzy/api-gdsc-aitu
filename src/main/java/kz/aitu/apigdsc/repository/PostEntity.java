@@ -14,7 +14,7 @@ import javax.persistence.*;
 public class PostEntity {
     @Id
     @GeneratedValue
-    private Integer id;
+    private Long id;
     @Column(nullable = false)
     private String title;
     @Column(nullable = false)
