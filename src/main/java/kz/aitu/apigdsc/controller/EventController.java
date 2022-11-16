@@ -8,7 +8,8 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
-@RestController("/event")
+@RestController
+@RequestMapping("/event")
 public class EventController {
 
     @Autowired
