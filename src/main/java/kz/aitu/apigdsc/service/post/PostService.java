@@ -10,7 +10,7 @@ public interface PostService {
 
     PostResponse getPostById(String postId);
 
-    PostResponse updatePostById(String postId);
+    PostResponse updatePostById(PostRequest postRequest);
 
     List<PostResponse> getAllPosts();
 

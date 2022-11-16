@@ -16,6 +16,8 @@ public class PostEntity {
     @GeneratedValue
     private Long id;
     @Column(nullable = false)
+    private String postId;
+    @Column(nullable = false)
     private String title;
     @Column(nullable = false)
     private String description;
