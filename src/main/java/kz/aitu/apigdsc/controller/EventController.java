@@ -20,7 +20,7 @@ public class EventController {
         return eventService.getAllEvents();
     }
 
-    @GetMapping("/{id}")
+    @GetMapping("/{eventId}")
     public EventResponse getEvent(@PathVariable String eventId) {
         return eventService.getEventById(eventId);
     }
@@ -30,12 +30,13 @@ public class EventController {
         return eventService.createEvent(event);
     }
 
-    @PutMapping("/{id}")
-    public EventResponse updateEvent(@RequestBody EventRequest event) {
+    @PutMapping("/{eventId}")
+    public EventResponse updateEvent(@PathVariable String eventId, @RequestBody EventRequest event) {
+        event.setEventId(eventId);
         return eventService.updateEvent(event);
     }
 
-    @DeleteMapping("/{id}")
+    @DeleteMapping("/{eventId}")
     public void deleteEvent(@PathVariable String eventId) {
         eventService.deleteEventById(eventId);
     }
