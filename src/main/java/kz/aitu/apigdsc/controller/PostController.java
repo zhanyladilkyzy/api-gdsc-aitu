@@ -21,7 +21,7 @@ public class PostController {
         return postService.getAllPosts();
     }
 
-    @GetMapping("/{id}")
+    @GetMapping("/{postId}")
     public PostResponse getPost(@PathVariable String postId) {
         return postService.getPostById(postId);
     }
@@ -30,15 +30,16 @@ public class PostController {
     public PostResponse addPost(@RequestBody PostRequest postRequest) {
         return postService.createPost(postRequest);
     }
-//
-//    @PutMapping("/{id}")
-//    public EventResponse updateEvent(@RequestBody EventRequest event) {
-//        return eventService.updateEvent(event);
-//    }
-//
-//    @DeleteMapping("/{id}")
-//    public void deleteEvent(@PathVariable String eventId) {
-//        eventService.deleteEventById(eventId);
-//    }
+
+    @PutMapping("/{postId}")
+    public PostResponse updatePost(@PathVariable String postId, @RequestBody PostRequest postRequest) {
+        postRequest.setPostId(postId);
+        return postService.updatePost(postRequest);
+    }
+
+    @DeleteMapping("/{postId}")
+    public void deletePost(@PathVariable String postId) {
+        postService.deletePost(postId);
+    }
 
 }

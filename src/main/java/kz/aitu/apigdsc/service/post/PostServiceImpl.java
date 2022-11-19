@@ -40,7 +40,7 @@ public class PostServiceImpl implements  PostService{
     }
 
     @Override
-    public PostResponse updatePostById(PostRequest postRequest) {
+    public PostResponse updatePost(PostRequest postRequest) {
         PostEntity dbEntity = postRepository.getPostEntityByPostId(postRequest.getPostId());
         PostEntity updatedEntity = modelMapper.map(postRequest, PostEntity.class);
         updatedEntity.setId(dbEntity.getId());
@@ -56,7 +56,8 @@ public class PostServiceImpl implements  PostService{
     }
 
     @Override
-    public void deletePostById(String postId) {
-        postRepository.deleteByPostId(postId);
+    public void deletePost(String postId) {
+        PostEntity postEntity = postRepository.getPostEntityByPostId(postId);
+        postRepository.deletePostEntityById(postEntity.getId());
     }
 }
