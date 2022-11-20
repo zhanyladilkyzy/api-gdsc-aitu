@@ -1,6 +1,6 @@
 package kz.aitu.apigdsc.repository;
 
-import kz.aitu.apigdsc.model.UserRole;
+import kz.aitu.apigdsc.model.user.UserRole;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;

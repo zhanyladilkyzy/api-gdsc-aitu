@@ -1,14 +1,17 @@
-package kz.aitu.apigdsc.model;
+package kz.aitu.apigdsc.model.user;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+
 import javax.validation.constraints.NotNull;
 
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class User {
+public class UserRequest {
+
+    private String userId;
     @NotNull
     private String name;
 

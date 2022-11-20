@@ -1,4 +1,4 @@
-package kz.aitu.apigdsc.model;
+package kz.aitu.apigdsc.model.user;
 
 import lombok.Getter;
 
