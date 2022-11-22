@@ -15,7 +15,9 @@ import javax.persistence.*;
 public class UserEntity {
     @Id
     @GeneratedValue
-    private Integer id;
+    private Long id;
+    @Column(nullable = false, length = 80)
+    private String userId;
     @Column(nullable = false, length = 80)
     private String name;
     @Column(nullable = false, length = 80)
